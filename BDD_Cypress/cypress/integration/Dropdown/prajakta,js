@@ -1,0 +1,40 @@
+import { Given, Then, When } from "cypress-cucumber-preprocessor/steps";
+
+
+Given("Navigate to the recast login page", ()=>{
+    cy.visit('https://app.recast.studio/auth/login/?next=/')
+})
+
+// Valid credentials:
+
+When('User entered the username and password and click on login button', ()=>{
+    cy.get('#login-form_email').type('pansaregauri9@gmail.com')
+    cy.get('#login-form_password').type('gauri@')
+    cy.get('button[type="submit"]').click()
+})
+Then('User should navigate to recast Dashboard', ()=>{
+    cy.get('h4[class="ant-typography"]').should('have.text', 'Create New Project')
+    cy.get('.ant-menu-item-selected > span:nth-child(2)').should('have.text', 'Dashboard')
+})
+
+
+// Invalid credentials:
+When('User entered the invalid username and invalid password and click on login button', ()=>{
+    cy.get('#login-form_email').type('pansaregauri@gmail.com')
+    cy.get('#login-form_password').type('gauri')
+    cy.get('button[type="submit"]').click()
+})
+
+Then('User should not be logged in', ()=>{
+    cy.url().should('include', 'login')
+})
+
+// Outline <username> and <password> and click on login button
+When("Outline {word} and {word} and click on login button", function(username, password){
+    cy.get('#login-form_email').type(username)
+    cy.get('#login-form_password').type(password)
+    cy.get('button[type="submit"]').click()
+})
+Then('User should navigate to recast home page', ()=>{
+    cy.get('.ant-menu-item-selected > span:nth-child(2)').should('have.text', 'Dashboard')
+})
