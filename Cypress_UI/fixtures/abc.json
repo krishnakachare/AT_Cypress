@@ -1,0 +1,14 @@
+{
+  "userOne": {
+    "firstName": "data",
+    "lastName": "hello",
+    "email": "Fi@gmail.com",
+    "comments": "hello i am new to cypress"
+  },
+  "userTwo": {
+    "firstName": "data2",
+    "lastName": "hello2",
+    "email": "Fi@gmail2.com",
+    "comments": "2hello i am new to cypress"
+  }
+}

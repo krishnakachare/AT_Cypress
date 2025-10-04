@@ -1,0 +1,9 @@
+[
+          {
+                    "firstName": "ankit",
+                    "lastName": "testLastName1",
+                    "email": "testEmail@gmail.com",
+                    "msg": "this is test data",
+                    "successMsg": "Thanks for contacting us! We will get in touch with you shortly.'"
+          }
+]

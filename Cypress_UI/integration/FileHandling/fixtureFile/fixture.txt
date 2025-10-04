@@ -1,0 +1,16 @@
+1. Js -->
+   
+   1. require(filePath)
+   2. import statement
+
+2. Cypress -->
+
+# Command syntax =>  cy.fixture(filePath, encoding, options)
+
+# we can store fixture data in cypress variable (Aliase) => .as(fixtData)
+
+# cy.fixture(filePath, encoding, options)
+  1. filePath --> File name (with or without extension)
+  2. filePath --> If we have nested folder structure under fixture file then need to file path from fixture
+
+
