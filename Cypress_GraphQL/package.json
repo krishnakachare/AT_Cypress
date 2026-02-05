@@ -1,0 +1,36 @@
+{
+  "name": "moreoncypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress-ntlm open",
+    "test:run": "cypress-ntlm run",
+    "test-open": "cypress open",
+    "test-run": "cypress run --spec \"cypress/integration/Proper_Video_Fail_Spec.js\"",
+    "test:smoke": "cypress run --env grep=\"Smoke\"",
+    "test:smoke:regression": "cypress run --env grep=\"Smoke; Regression\"",
+    "test:tag:sprint": "cypress run --env grepTags=\"Sprint\"",
+    "test:tag:sprintOrRegression": "cypress run --env grepTags=\"Sprint Regression \"",
+    "test:tag:sprintAndRegression": "cypress run --env grepTags=\"Sprint+Regression \"",
+    "test:tag:invertRegression": "cypress run --env grepTags=\"-Regression \" --spec \"cypress/integration/Group_TCS_2.js\""
+  },
+  "keywords": [],
+  "author": "QA BOX <qabox@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cypress-fail-on-console-error": "^2.1.0",
+    "cypress-grep": "^2.5.2",
+    "cypress-ntlm-auth": "^3.2.3",
+    "del": "^6.0.0",
+    "form-data": "^4.0.0",
+    "jimp": "^0.16.1",
+    "qrcode-reader": "^1.0.4"
+  },
+  "devDependencies": {
+    "@neuralegion/cypress-har-generator": "^5.2.3",
+    "cypress": "^8.4.0",
+    "cypress-failed-log": "^2.9.2"
+  }
+}
