@@ -1,0 +1,4 @@
+dist/
+
+# Temporary directory for test execution
+tmp/
